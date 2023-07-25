@@ -1,0 +1,588 @@
+Delivered-To: uessit.xob@gmail.com
+Received: by 2002:a17:906:8495:b0:992:d8df:ef1 with SMTP id m21csp3502317ejx;
+        Thu, 20 Jul 2023 07:44:25 -0700 (PDT)
+X-Google-Smtp-Source: APBJJlE2PayDvUukAwcarB4GPrBY62qJhuSoapxnnORc/HLRmSTRUeE1zh4zZdQrwpy+GSTwOGOl
+X-Received: by 2002:a05:6870:c890:b0:1b0:3f7f:673a with SMTP id er16-20020a056870c89000b001b03f7f673amr1219268oab.25.1689864265246;
+        Thu, 20 Jul 2023 07:44:25 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1689864265; cv=none;
+        d=google.com; s=arc-20160816;
+        b=BNjE/XFmrxEX6EUpDoPYCsisjHlxTafN5yACJaRg/F6VFq84pBXjl3sklKqP0g/1K5
+         tkp3bB8W3foM6h5NZHLYQfjwas4738MCaeHdhaikj4WeaOxWiptmbtxdIFpz1NeTRupC
+         6FlaE0eipPWgvUm2Tg5+0m+h4SyWD3KmVdEOdmz4kspwdFX479Kc5hMhWNGST4hxzjZg
+         kORKLqZxVy+5Je8wjsgspxxJhT6OpFk4iQGua6ayI9cxbZSs07rh2lHfXeuX+1OhFDEo
+         G9XOaOjXdGCnH2JJ98gbVfLEUDpRdc7cPt1uJQkvrpxZrEctoX9mKtFAkqSvg+ng2eWF
+         tnkQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:feedback-id:message-id:list-id:reply-to
+         :mime-version:list-unsubscribe-post:list-unsubscribe:date:subject:to
+         :from:dkim-signature;
+        bh=9DIA9HJhGAAoLtu0qBbTxhJPc97xy8UEe30hJ6SrXDU=;
+        fh=gFeqh7xucm+Lm5V3C+Dn8eHLeN3fDUVFvBO1lnFz5xU=;
+        b=ZrnRYAi9FG/DmDk0TQoPhJtjuHZ/WNOfUq+ryYW6ppE8Ptv58BrRsdHEfZdg6L0G2A
+         ckHciyQsOeE4w+nmPole67gVAWbjbsSPXeRIP0YhPAzwp0gZlvWeKppMYH2lM2Ptam08
+         6slahupvlKS9cYvkdvT2NEqUJ9RDIsit8gUVdde+WD70lAT+gVJXthgIR4HEzh6SYlpE
+         MJQzQP6LuyFpUK90QFJaL2Ri6iIo03x3x+HCTIn2qhF5dhul2T1HMkrGx5XeJX+RqfcC
+         XtawQO1iKk1bPAg8NpPdF0EAv129zXATJBiy9rIlE1PUAUt7Wyxw2HeemH9EKQR6CUuZ
+         g9Wg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@c.coach.com header.s=10dkim1 header.b=IBoYrNgv;
+       spf=pass (google.com: domain of bounce-9998_html-170235028-315798-100038566-18210@bounce.c.coach.com designates 13.111.162.202 as permitted sender) smtp.mailfrom=bounce-9998_HTML-170235028-315798-100038566-18210@bounce.c.coach.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=c.coach.com
+Return-Path: <bounce-9998_HTML-170235028-315798-100038566-18210@bounce.c.coach.com>
+Received: from mta4.c.coach.com (mta4.c.coach.com. [13.111.162.202])
+        by mx.google.com with ESMTPS id t13-20020a056870e74d00b001ad1636ea5dsi588770oak.246.2023.07.20.07.44.25
+        for <uessit.xob@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 20 Jul 2023 07:44:25 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-9998_html-170235028-315798-100038566-18210@bounce.c.coach.com designates 13.111.162.202 as permitted sender) client-ip=13.111.162.202;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@c.coach.com header.s=10dkim1 header.b=IBoYrNgv;
+       spf=pass (google.com: domain of bounce-9998_html-170235028-315798-100038566-18210@bounce.c.coach.com designates 13.111.162.202 as permitted sender) smtp.mailfrom=bounce-9998_HTML-170235028-315798-100038566-18210@bounce.c.coach.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=c.coach.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=10dkim1; d=c.coach.com; h=From:To:Subject:Date:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version: Reply-To:List-ID:X-CSA-Complaints:Message-ID:Content-Type: Content-Transfer-Encoding; i=coach@c.coach.com; bh=9DIA9HJhGAAoLtu0qBbTxhJPc97xy8UEe30hJ6SrXDU=; b=IBoYrNgvIFUCF+DrGegXlb7nJTb5E75G4UanczRCfPxJeahHPoZKPnWtYc0HPUMFlpaa/LsGcD6/
+   RertzcxRGQdWBWhZNGn/vB8w4ga3uXgDiUi3q9TDOze8j6BhqElYTsghl3m+VTqVPaukxh2WAF8Z
+   H8AXuUY0E5zV0+Q/iI/wMWbuRAUUyjwj+f+bAqZuXSIqJs8JWGoWvjQxxXQigoHf2Vj2QYra7keH
+   7UsLvaU4RrjxUIsE55WDky+W8Q+8BaJmeHtci7dn6iQz0d+WS+31Mt6foi/TBWc5R1rEZdHQP+QQ
+   Zcf1J0d+K52WyDc8Ak4nsh16+0cSzIS76GLOyA==
+Received: by mta4.c.coach.com id hn544i2fmd43 for <uessit.xob@gmail.com>; Thu, 20 Jul 2023 14:37:49 +0000 (envelope-from <bounce-9998_HTML-170235028-315798-100038566-18210@bounce.c.coach.com>)
+From: Coach <coach@c.coach.com>
+To: <uessit.xob@gmail.com>
+Subject: 50% off all sale styles.
+Date: Thu, 20 Jul 2023 08:37:49 -0600
+List-Unsubscribe: <https://cl.S10.exct.net/subscription_center.aspx?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtaWQiOiIxMDAwMzg1NjYiLCJzIjoiMTcwMjM1MDI4IiwibGlkIjoiOTk5OCIsImoiOiIzMTU3OTgiLCJqYiI6IjE4MjEwIiwiZCI6IjEwMDE5MiJ9.cZDACYeIUF5CLRFXAp1ZIE00IpE4Il5hinCML4eQ9YU>, <mailto:leave-fd081d797c6c6b2531492c-fe33157775660778751678-febe177170630d75-fe32157075640775701276-ff031578776504@leave.c.coach.com>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+x-CSA-Compliance-Source: SFMC
+MIME-Version: 1.0
+Reply-To: CoachNA <reply-febe177170630d75-9998_HTML-170235028-100038566-18210@c.coach.com>
+List-ID: <100025030.xt.local>
+X-CSA-Complaints: csa-complaints@eco.de
+X-SFMC-Stack: 10
+x-job: 100038566_315798
+Message-ID: <a62c2dab-51b7-434e-9788-d33195f7a67a@dfw1s10mta1019.xt.local>
+Feedback-ID: 100038566:315798:13.111.162.202:sfmktgcld
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+  <head>
+    <!--  -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Tapestry, Inc.
+    </title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&display=swap");
+      @import url(https://fast.fonts.net/cssapi/22d7b642-0ee0-41e4-ba50-8fc4bcba4bb4.css);
+      body {
+        margin: 0 !important;
+        min-width: 100% !important;
+        padding: 0 !important;
+        width: 100% !important;
+      }
+      * {
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+      }
+      img {
+        border: 0;
+        height: auto;
+        line-height: 100%;
+      }
+      sup {
+        font-size: 45%;
+        line-height: 0;
+      }
+      span.outlook-overflow-scaling {
+        width: 100% !important;
+        max-width: 100%;
+        padding: 0 !important;
+      }
+      a, a:link {
+        color: #2A5DB0;
+        text-decoration: none;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        margin: 0 0 15px;
+        font-family: 'Helvetica LT W05 Bold', Helvetica, serif !important;
+      }
+      p {
+        margin: 0 0 15px;
+      }
+      #backgroundWrapper, .email-body {
+        background-color: #ffffff;
+      }
+      .desktop-content {
+        display: block!important;
+        height: inherit !important;
+      }
+      .mobile-content {
+        display: none;
+      }
+      .stack-wrapper {
+        font-size: 0;
+        text-align: center;
+        white-space: nowrap;
+      }
+      .stack-wrapper .column, .stack-wrapper .column1, .stack-wrapper .column2, .stack-wrapper .column3 {
+        display: inline-block;
+        vertical-align: top;
+        white-space: normal;
+        width: 100%;
+      }
+      .bgImage-wrapper .heading {
+        font-size: 45px !important;
+      }
+      .cta-btn, .footer-content, .nav-content, .cta-link, .special-text {
+        font-family: 'Helvetica LT W05 Roman', Helvetica, sans-serif !important;
+      }
+      .cta-link, .special-text {
+        font-size: 18px !important;
+      }
+      .text-wrapper {
+        font-family: 'Bembo MT W05 Regular', Times, serif !important;
+        font-size: 24px !important;
+      }
+      .heading {
+        font-size: 55px !important;
+      }
+      .subheading {
+        font-size: 45px !important;
+      }
+      .subheading2 {
+        font-size: 45px !important;
+      }
+      .banner {
+        font-family: 'Helvetica LT W05 Bold', Helvetica, serif !important;
+      }
+      .imagegrid {
+        padding: 10px !important;
+      }
+      .twoColumn .column {
+        max-width: 260px;
+      }
+      .twoColumn .text-wrapper {
+        padding: 0 !important;
+      }
+      .w4-bodycopy {
+        padding: 0 55px !important;
+        font-size: 24px !important;
+      }
+      .grid-caption {
+        font-size: 32px !important;
+      }
+      @media only screen and (max-width: 639px) {
+        u ~ .email-body #backgroundWrapper {
+          width: 100vw !important;
+        }
+        .desktop-content {
+          display: none !important;
+          height: 0 !important;
+        }
+        .mobile-content {
+          display: block;
+        }
+        .stack-wrapper {
+          white-space: normal !important;
+        }
+        .bgImage-wrapper .heading {
+          font-size: 40px !important;
+        }
+        .cta-link {
+          font-size: 15px !important;
+        }
+        .special-text {
+          font-size: 16px !important;
+        }
+        .text-wrapper {
+          font-size: 20px !important;
+        }
+        .heading {
+          font-size: 45px !important;
+        }
+        .subheading {
+          font-size: 40px !important;
+        }
+        .subheading2 {
+          font-size: 35px !important;
+        }
+        .imagegrid {
+          padding: 5px !important;
+        }
+        .twoColumn .column {
+          max-width: 100%;
+        }
+        .twoColumn .text-wrapper {
+          padding: 20px 0 0 !important;
+        }
+        .w4-bodycopy {
+          padding: 0 !important;
+          font-size: 20px !important;
+        }
+        .grid-caption {
+          font-size: 28px !important;
+        }
+      }
+      @media only screen and (max-width: 450px) {
+        .headline-mobile {
+          font-size: 40px !important;
+          line-height: 50px !important;
+        }
+        .subcopy-mobile {
+          font-size: 18px !important;
+        }
+      }
+      @media print{ #_two50 { background-image:url('https://COHRTL.everestengagement.com/ea/x2jNbBf7hP/?t=p&e=9938d0a6ddbc508706599336818fa438fa6ba835c3032817c07ea0b24d0864bc'); } } blockquote #_two50, #mailContainerBody #_two50, div.OutlookMessageHeader, table.moz-email-headers-table { background-image:url('https://COHRTL.everestengagement.com/ea/x2jNbBf7hP/?t=f&e=9938d0a6ddbc508706599336818fa438fa6ba835c3032817c07ea0b24d0864bc'); }
+        
+    </style>
+    <!--[if false]><!-->
+    <style>
+      a[x-apple-data-detectors], #MessageViewBody .samsungfix a {
+        color: inherit !important;
+        font-family: inherit !important;
+        font-size: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+        text-decoration: none !important;
+      }
+      #MessageViewBody, #MessageWebViewDiv {
+        margin: 0 !important;
+        min-width: 100vw;
+        padding: 0 !important;
+        zoom: 1 !important;
+      }
+      #MessageViewBody #backgroundWrapper {
+        min-width: 100vw;
+      }
+      @media yahoo {
+        #backgroundWrapper {
+          table-layout: fixed;
+        }
+      }
+    </style>
+    <!--<![endif]-->
+    <!--[if true]> <style> table { border-collapse: collapse; } table, td { mso-line-height-rule: exactly; mso-margin-bottom-alt: 0; mso-margin-top-alt: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; } li { text-indent: -1em; margin: 0px 0px 6px; } sup { font-size: 75%; mso-text-raise: 12%; } .column, .column1, .column2, .column3 { margin: 0 !important; } .cta-btn { padding: 12px 35px 10px; font-family: Helvetica, Arial, sans-serif !important; width: 270px; } .cta-link, .footer-content, .nav-content { font-family: Helvetica, Arial, sans-serif !important; } .desktop-content { display: block !important; } .heading, .text-wrapper { font-family: serif !important; } </style> <![endif]-->
+    <!--[if gte mso 9]> <xml> <o:OfficeDocumentSettings> <o:AllowPNG/> <o:PixelsPerInch>96</o:PixelsPerInch> </o:OfficeDocumentSettings> </xml> <![endif]-->
+  </head>
+  <body class="email-body" style="font-family: sans-serif; margin: 0; padding: 0;"><style type="text/css">
+div.preheader 
+{ display: none !important; } 
+</style>
+<div class="preheader" style="font-size: 1px; display: none !important;">This sale is ending soon. 🛒</div>
+    <table id="backgroundWrapper" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+      <tr>
+        <td width="100%" align="center" style="max-width: 520px;">
+          <!----><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">
+     
+
+<table border="0" cellpadding="0" cellspacing="0" width="520" style="max-width: 520px;" align="center">
+  <tr>
+    <td style="display: none;">
+   &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj;
+ &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj;
+   </td>
+    <td align="left" class="nav-content" style="font-family: sans-serif; font-size: 13px; line-height: 1.2; padding: 10px;">
+      <p style="margin: 0;">
+        <a   data-linkto="https://" href="https://click.c.coach.com/?qs=1a8724e24e14b4c66405ed6008d7454acda19cd57b6c9647fcb3017941d47a5c63e0ac8c5321304dad4ff6ead2c9594baa5ce4cb0c858c6e7d5fca615c1827a1" style="color:#000001;text-decoration:none;" target="_blank" title="">This sale is ending soon. 🛒</a>
+      </p>
+    </td>
+    <td align="right" class="nav-content" style="font-family: sans-serif; font-size: 13px; line-height: 1.2; padding: 10px;">
+      <p style="margin: 0;">
+        <a  href="https://view.c.coach.com/?qs=d3f8ee8bf76c9ce7d036ad6688ffccc385f787b29ac5f95c97afc4ca072b2a9c8d30b82b69103e49f46263c9e65a50d3d71010102d1fcdb5d540d618bfaa577743255e36499a39661597ab318575958137425f1074ba2a20" style="color: #000001; text-decoration: underline;" target="_blank">View in web browser</a>
+      </p>
+    </td>
+  </tr>
+</table></td></tr></table><!----><!----><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"></td></tr></table><!---->
+          
+        </td>
+      </tr>
+      <tr>
+        <td align="center">
+          <div style="display: none; max-height: 0px; overflow: hidden;">
+            <img src="https://cl.S10.exct.net/open.aspx?ffcb10-febe177170630d75-fe2b1771776d0774761773-fe32157075640775701276-ff1c1d797c6c-fe33157775660778751678-ff031578776504&d=100192&bmt=0" width="1" height="1" alt="">
+          <!--EVEREST RP PIXEL-->
+          <div id='_two50'></div> <img id='_two50_img' src='https://COHRTL.everestengagement.com/ea/x2jNbBf7hP/?e=9938d0a6ddbc508706599336818fa438fa6ba835c3032817c07ea0b24d0864bc' width='1' height='1' style='margin:0 !important; padding:0 !important; border:0 !important; height:1px !important; width:1px !important;' />
+            
+            <!--OVATIVE PIXEL-->
+            <img src="https://analytics.coach.com/pc/coach-map/?pch=3&pei=2&ci_paic=1&ci_peic=1&ogmap=EM|MKTG|SF||||RETAIL|20230720_WK03_COH_RTL_SASFinalDays_FullFile_PFPS_FY24_NA____&ogemh=9938d0a6ddbc508706599336818fa438fa6ba835c3032817c07ea0b24d0864bc" width="1" height="1" style="display:none">
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td align="center">
+          <table border="0" cellpadding="0" cellspacing="0" role="presentation">
+            <tr>
+              <td class="main" align="center" style="width: 520px;">
+                <!----><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+  <tr valign="top">
+    <td align="center">
+      <a href="https://click.c.coach.com/?qs=1a8724e24e14b4c6c2b223236fd73ff647ba9e1e89b9bd3cfa32c67835b3534768f2f08f602c89fd321c0200ae4b8299343dc06e0c78e6a2a61352ecebd995c8"><img border="0" src="http://ris.res-x.com/image.aspx?appid=coachus01&userid=9938d0a6ddbc508706599336818fa438fa6ba835c3032817c07ea0b24d0864bc&index=1&scheme=abandcart_rr&campaignid=20230720_WK03_COH_RTL_SASFinalDays_FullFile_PFPS_FY24_NA____" alt="Forgetting Something in your cart?"></a>
+    </td>
+  </tr>
+</table></td></tr></table><!---->
+                
+                <!----><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+
+  <tr>
+    <td align="center">
+      <a  href="https://click.c.coach.com/?qs=1a8724e24e14b4c60673f55a50da31301b05437f127fae185389740b04bd3c23d92be3e942c2ba556cb29131a19adc4d4de852311f2dad051936274abba53430" style="color: #000001;" target="_blank"><img alt="Coach" src="https://image.c.coach.com/lib/fe32157075640775701276/m/7/6c1f88fc-40c2-464a-811b-c4a7d9048fee.png" style="display: block; max-width: 520px; width: 100%; margin: 0; border: 0;" width="520"> </a>
+    </td>
+  </tr>
+</table></td></tr></table><!---->
+                
+                <!----><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">
+<table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px; " class="stylingblock-content-wrapper camarker-inner"></td></tr></table>
+
+</td></tr></table><!----><!----><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0" role="presentation"><tr><td align="center"><a href="https://click.c.coach.com/?qs=1a8724e24e14b4c6f9b7316830e123930144873b736c5ae9748d145a78eb1333a1799a4dc6e8df639451ff75431fb1a652f8244e7fe1bef26329d63eb7168516" title=""   data-linkto="https://"><img data-assetid="222297" src="https://image.c.coach.com/lib/fe32157075640775701276/m/1/FY23-SUMMER-SAS_Ending-Soon-24-Hours-Ticker_02.gif" alt="Last chance for half off." width="519" style="display: block; padding: 0px; text-align: center; height: auto; width: 100%; border: 0px;"></a></td></tr></table></td></tr></table><!----><!---->
+<table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0" role="presentation"><tr><td align="center"><a href="https://click.c.coach.com/?qs=1a8724e24e14b4c6f9b7316830e123930144873b736c5ae9748d145a78eb1333a1799a4dc6e8df639451ff75431fb1a652f8244e7fe1bef26329d63eb7168516" title=""   data-linkto="https://"><img data-assetid="222301" src="https://image.c.coach.com/lib/fe32157075640775701276/m/1/FY23-SUMMER-SAS_Ending-Soon-24-Hours-Tickerv2_03.jpg" alt="Ends soon. 50% off all sale styles. (There's still time!) VIEW ALL SALE" width="519" style="display: block; padding: 0px; text-align: center; height: auto; width: 100%; border: 0px;"></a></td></tr></table></td></tr>
+</table><!----><!----><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0" role="presentation"><tr><td align="center"><a href="https://click.c.coach.com/?qs=1a8724e24e14b4c6e77e5711062ad0707f3a19978fa552e10531789103c2d1143f80f6291c14ddd1598551106b2f8e6f3d60c8ad2a16249f9f28fbd449c4a7d9" title=""   data-linkto="https://"><img data-assetid="222302" src="https://image.c.coach.com/lib/fe32157075640775701276/m/1/FY23-SUMMER-SAS_Ending-Soon-24-Hours-Tickerv2_04.jpg" alt="VIEW WOMEN'S SALE" width="519" style="display: block; padding: 0px; text-align: center; height: auto; width: 100%; border: 0px;"></a></td></tr></table></td></tr></table><!----><!---->
+<table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0" role="presentation"><tr><td align="center"><a href="https://click.c.coach.com/?qs=1a8724e24e14b4c64bd8dfb27b430733730818a999617396785b3905ff92cfaeeee424dce38d02e199b20ab315e6925a0b74b31a819ef5ecff541657657194f0" title=""   data-linkto="https://"><img data-assetid="222300" src="https://image.c.coach.com/lib/fe32157075640775701276/m/1/FY23-SUMMER-SAS_Ending-Soon-24-Hours-Tickerv2_05.jpg" alt="VIEW MEN'S SALE" width="519" style="display: block; padding: 0px; text-align: center; height: auto; width: 100%; border: 0px;"></a></td></tr></table></td></tr></table><!----><!----><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr>
+<td class="stylingblock-content-wrapper camarker-inner"><table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+  <tr>
+    <td align="center" style="padding: 40px 0px 8px 10px;" width="173">
+      <a href="https://click.c.coach.com/?qs=1a8724e24e14b4c6f3b676e11e33a7ebe8e06240e8592cdfb0adf1b8654e5d5f31b6e36bacacf15181a12c87b72081b176aa270d2dc63d21db3e3c6ccd26aa78"><img alt="Shop Now" border="0" src="http://ris.res-x.com/image.aspx?appid=coachus01&userid=9938d0a6ddbc508706599336818fa438fa6ba835c3032817c07ea0b24d0864bc&index=1&scheme=marketing14_rr&campaignid=20230720_WK03_COH_RTL_SASFinalDays_FullFile_PFPS_FY24_NA____"></a>
+    </td>
+    <td align="center" style="padding: 40px 10px 8px 10px;" width="174">
+      <a href="https://click.c.coach.com/?qs=1a8724e24e14b4c673eb2f24fd8b8a1b18f4c3ba56bdd6aeafb31b719d20fba04dbae15face5b25ab4ac781c6eed47a9535330ec088b89197d1bea3eb9058bc4"><img alt="Shop Now" border="0" src="http://ris.res-x.com/image.aspx?appid=coachus01&userid=9938d0a6ddbc508706599336818fa438fa6ba835c3032817c07ea0b24d0864bc&index=2&scheme=marketing14_rr&campaignid=20230720_WK03_COH_RTL_SASFinalDays_FullFile_PFPS_FY24_NA____"></a>
+    </td>
+    <td align="center" style="padding: 40px 10px 8px 0px;" width="173">
+      <a href="https://click.c.coach.com/?qs=1a8724e24e14b4c6f970f67cfbe76d25b93e72a0d8cc0b1f7a7fb7f9aaec04acf333a380db09ec390150fa0c2091d059d02c8ae39ffdc5a4e544bcbb066d44b7"><img alt="Shop Now" border="0" src="http://ris.res-x.com/image.aspx?appid=coachus01&userid=9938d0a6ddbc508706599336818fa438fa6ba835c3032817c07ea0b24d0864bc&index=3&scheme=marketing14_rr&campaignid=20230720_WK03_COH_RTL_SASFinalDays_FullFile_PFPS_FY24_NA____"></a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" style="padding: 0px 0px 8px 10px;" width="173">
+      <a href="https://click.c.coach.com/?qs=1a8724e24e14b4c6639964fdc48b3d1187c8abf8bb7cda1a33f021a664416feb80260fd11a7386304c05e79f1e66a6209557358805753be25d09da49b412c5bc"><img alt="Shop Now" border="0" src="http://ris.res-x.com/image.aspx?appid=coachus01&userid=9938d0a6ddbc508706599336818fa438fa6ba835c3032817c07ea0b24d0864bc&index=4&scheme=marketing14_rr&campaignid=20230720_WK03_COH_RTL_SASFinalDays_FullFile_PFPS_FY24_NA____"></a>
+    </td>
+    <td align="center" style="padding: 0px 10px 8px 10px;" width="174">
+      <a href="https://click.c.coach.com/?qs=1a8724e24e14b4c6419d18324daf697ce7525b0128e259b3cecf35c9a74acfd3f782f40ed1ca8dcbf77b8d0f26952612f4ef89f42a736663feb0beb935697183"><img alt="Shop Now" border="0" src="http://ris.res-x.com/image.aspx?appid=coachus01&userid=9938d0a6ddbc508706599336818fa438fa6ba835c3032817c07ea0b24d0864bc&index=5&scheme=marketing14_rr&campaignid=20230720_WK03_COH_RTL_SASFinalDays_FullFile_PFPS_FY24_NA____"></a>
+    </td>
+    <td align="center" style="padding: 0px 10px 8px 0px;" width="173">
+      <a href="https://click.c.coach.com/?qs=1a8724e24e14b4c6f6553511b800d1e3201b77ccc4a3df85ff800ea61663914dcb9f41c9d4f019ce488b9d010fa757746ea3ef2cc011ff590cc9213483003231"><img alt="Shop Now" border="0" src="http://ris.res-x.com/image.aspx?appid=coachus01&userid=9938d0a6ddbc508706599336818fa438fa6ba835c3032817c07ea0b24d0864bc&index=6&scheme=marketing14_rr&campaignid=20230720_WK03_COH_RTL_SASFinalDays_FullFile_PFPS_FY24_NA____"></a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" style="padding: 0px 0px 8px 10px;" width="173">
+      <a href="https://click.c.coach.com/?qs=1a8724e24e14b4c6caf5b77c44071f4a45c2f7b3ad212660318a8d006c92c66bfdec491bd2c15b49bee747f0283ff3b872841e1344e9924907532c5b6ac788c8"><img alt="Shop Now" border="0" src="http://ris.res-x.com/image.aspx?appid=coachus01&userid=9938d0a6ddbc508706599336818fa438fa6ba835c3032817c07ea0b24d0864bc&index=7&scheme=marketing14_rr&campaignid=20230720_WK03_COH_RTL_SASFinalDays_FullFile_PFPS_FY24_NA____"></a>
+    </td>
+    <td align="center" style="padding: 0px 10px 8px 10px;" width="174">
+      <a href="https://click.c.coach.com/?qs=1a8724e24e14b4c6145e0a0e74eab55b63ca8f5f93ce8cc54515ce40541486eddac2cd795350f4cae9c12518699220dff857b4376cd85a7e157688b8ed271032"><img alt="Shop Now" border="0" src="http://ris.res-x.com/image.aspx?appid=coachus01&userid=9938d0a6ddbc508706599336818fa438fa6ba835c3032817c07ea0b24d0864bc&index=8&scheme=marketing14_rr&campaignid=20230720_WK03_COH_RTL_SASFinalDays_FullFile_PFPS_FY24_NA____"></a>
+    </td>
+    <td align="center" style="padding: 0px 10px 8px 0px;" width="173">
+      <a href="https://click.c.coach.com/?qs=1a8724e24e14b4c6eb3c8481f76e0c74ca5d77be3e3829ab0871e611aadf44b25de06c06634447f3b8b33e1f7c075d41e922e831b063e52a2f8162d83ff94744"><img alt="Shop Now" border="0" src="http://ris.res-x.com/image.aspx?appid=coachus01&userid=9938d0a6ddbc508706599336818fa438fa6ba835c3032817c07ea0b24d0864bc&index=9&scheme=marketing14_rr&campaignid=20230720_WK03_COH_RTL_SASFinalDays_FullFile_PFPS_FY24_NA____"></a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" style="padding: 0px 0px 40px 10px;" width="173">
+      <a href="https://click.c.coach.com/?qs=1a8724e24e14b4c68f602e70cc2186e0d28958903d4c09109b689187d28db3713b5057f9bf21a4d36d1273dcf9b4bb7c515bfb933ddd5a1efd7b3dba54269ce5"><img alt="Shop Now" border="0" src="http://ris.res-x.com/image.aspx?appid=coachus01&userid=9938d0a6ddbc508706599336818fa438fa6ba835c3032817c07ea0b24d0864bc&index=10&scheme=marketing14_rr&campaignid=20230720_WK03_COH_RTL_SASFinalDays_FullFile_PFPS_FY24_NA____"></a>
+    </td>
+    <td align="center" style="padding: 0px 10px 40px 10px;" width="174">
+      <a href="https://click.c.coach.com/?qs=1a8724e24e14b4c6fe66c2f9ef53f4e6bf0a9204635bec63f318b937ea280e974f5399b8f1e8f255afe61fe2f5ece116a2cc5785d1015553fd2d3dd69d89b27e"><img alt="Shop Now" border="0" src="http://ris.res-x.com/image.aspx?appid=coachus01&userid=9938d0a6ddbc508706599336818fa438fa6ba835c3032817c07ea0b24d0864bc&index=11&scheme=marketing14_rr&campaignid=20230720_WK03_COH_RTL_SASFinalDays_FullFile_PFPS_FY24_NA____"></a>
+    </td>
+    <td align="center" style="padding: 0px 10px 40px 0px;" width="173">
+      <a href="https://click.c.coach.com/?qs=1a8724e24e14b4c6fd83752780029dc4d3ed20928407a210fc5d95d9f20ef5021aac94319b4ba7815533112d018f5051bcfa5a8a917a3f8aa25196cede7a393f"><img alt="Shop Now" border="0" src="http://ris.res-x.com/image.aspx?appid=coachus01&userid=9938d0a6ddbc508706599336818fa438fa6ba835c3032817c07ea0b24d0864bc&index=12&scheme=marketing14_rr&campaignid=20230720_WK03_COH_RTL_SASFinalDays_FullFile_PFPS_FY24_NA____"></a>
+    </td>
+  </tr>
+</table> </td></tr></table><!----><!----><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0" role="presentation"><tr><td align="center"><a href="https://click.c.coach.com/?qs=1a8724e24e14b4c67195214f17f1ed73960761b2f8ee0379f7e66f66113f8fb36b086ff335b0bd24c3b85dc6411bbae5ca124fdc302388438938e52e69052740" title=""   data-linkto="https://"><img data-assetid="222296" src="https://image.c.coach.com/lib/fe32157075640775701276/m/1/8.1-New-Arrivals-Banner.jpg" alt="Summer refreshments. SHOP NEW ARRIVALS" width="519" style="display: block; padding: 0px 0px 40px; text-align: center; height: auto; width: 100%; border: 0px;"></a></td></tr></table></td></tr></table><!----><!---->
+<table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+  <tr>
+    <td align="center" style="border-top: 1px #000001 solid;">
+      <h1 style="color: #000001; font-family: 'Helvetica LT W05 Bold', Helvetica, serif; font-size: 32px; line-height: 45px; mso-line-height-alt: 100%; margin: 20px 0px 0px; font-weight: bold;">You'd look great together.
+      </h1>
+    </td>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+  <tr>
+    <td width="173" align="center" style="padding: 30px 0px 40px 10px;">
+      <a href="https://click.c.coach.com/?qs=1a8724e24e14b4c6a9a13680e8c16734101fdee172ad4b5c07c5b42997c019e263cdcb5d4c18f4215ebb276cb8a5a069790a76dfb01e9dc224737aee84830ba3"><img border="0" src="http://ris.res-x.com/image.aspx?appid=coachus01&userid=9938d0a6ddbc508706599336818fa438fa6ba835c3032817c07ea0b24d0864bc&index=1&scheme=marketing1_rr&campaignid=20230720_WK03_COH_RTL_SASFinalDays_FullFile_PFPS_FY24_NA____" alt="Shop Now"></a>
+    </td>
+    <td width="174" align="center" style="padding: 30px 10px 40px 10px;">
+      <a href="https://click.c.coach.com/?qs=1a8724e24e14b4c66e950cdfb8a3cf459f628d13299a452d6a1b6964dc26940fc1952f8aca8bedc012fa92bf30c56cf474a8e1cd91b92aeb25ec5bc050eca328"><img border="0" src="http://ris.res-x.com/image.aspx?appid=coachus01&userid=9938d0a6ddbc508706599336818fa438fa6ba835c3032817c07ea0b24d0864bc&index=2&scheme=marketing1_rr&campaignid=20230720_WK03_COH_RTL_SASFinalDays_FullFile_PFPS_FY24_NA____" alt="Shop Now"></a>
+    </td>
+    <td width="173" align="center" style="padding: 30px 10px 40px 0px;">
+      <a href="https://click.c.coach.com/?qs=1a8724e24e14b4c6d0379858de2277ed7c4ad9bb6d07882207b5cf6f1d99123eb918134492dde3db2a7131d59c7ffc038171da62e2599c191c20d4ff9593a5df"><img border="0" src="http://ris.res-x.com/image.aspx?appid=coachus01&userid=9938d0a6ddbc508706599336818fa438fa6ba835c3032817c07ea0b24d0864bc&index=3&scheme=marketing1_rr&campaignid=20230720_WK03_COH_RTL_SASFinalDays_FullFile_PFPS_FY24_NA____" alt="Shop Now"></a>
+    </td>
+  </tr>
+</table></td></tr></table><!----><!----><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">
+<table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 40px 0px 0px; " class="stylingblock-content-wrapper camarker-inner"><table cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;"><tr><td><table cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;"><tr><td valign="top" class="responsive-td" style="width: 50%; padding-right: 0px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr>
+<td style="padding: 0px; " class="stylingblock-content-wrapper camarker-inner"><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td style="padding: 20px 0px 0px;" align="center">
+      <a href="https://click.c.coach.com/?qs=12d6fd5142870f2bfeebfe5b5deedcdbe96680f522a4d38d96a3b48fa888558c3265970df66d783de94d1ed101d782169be22e853a818603fe20dd93e0db9127" title=""   data-linkto="https://"><img data-assetid="159941" src="https://image.c.coach.com/lib/fe32157075640775701276/m/8/ServiceBanner_01_Reloved_DarkModeIcon.png" alt="" style="display: block; padding: 0px; text-align: center; height: 50px; width: 100%; border: 0px none transparent;" width="260"></a>
+    </td>
+  </tr>
+  <tr>
+    <td style="font-family: 'Bembo MT Pro', Helvetica, serif; font-size: 18px; line-height: 24px; color: #000001; font-weight: 400; max-width: 260px;" align="center">
+      <p style="margin: 10px;">
+        <a  href="https://click.c.coach.com/?qs=12d6fd5142870f2bfeebfe5b5deedcdbe96680f522a4d38d96a3b48fa888558c3265970df66d783de94d1ed101d782169be22e853a818603fe20dd93e0db9127" style="color:#000001; text-decoration: none;" target="_blank"><strong>Pre-loved bags,</strong><br>restored and<br>reimagined.</a>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td style="padding: 10px 0 40px; mso-padding-alt: 10px 0 40px;" align="center">
+      <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="cta-link" style="background-color: #ffffff; border-bottom: 1px solid #000001; font-family: 'Helvetica LT W05 Roman', Helvetica, sans-serif;" align="center">
+            <a  href="https://click.c.coach.com/?qs=12d6fd5142870f2bfeebfe5b5deedcdbe96680f522a4d38d96a3b48fa888558c3265970df66d783de94d1ed101d782169be22e853a818603fe20dd93e0db9127" style="color: #000001; display: inline-block; font-size: 18px; font-weight: 400; line-height: 22px; mso-line-height-alt: 90%; text-decoration: none; text-transform: uppercase; padding-bottom: 2px;" target="_blank">SHOP COACH (RE)LOVED</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+ <tr>
+    <td style="border-top: 1px #000001 solid; padding: 30px 0px 0px;" align="center">
+      <a href="https://click.c.coach.com/?qs=12d6fd5142870f2b900dd5775338dcf73e955e41865e016bee8fd28d2e40ee8adac16f28aeb38b9a7771164f5d5fe3edc6a2755ee216089e20ea27b36b90ec2e" title=""   data-linkto="https://"><img data-assetid="159941" src="https://image.c.coach.com/lib/fe32157075640775701276/m/8/ServiceBanner_03_NonMember_DarkModeIcon.png" alt="" style="display: block; padding: 0px; text-align: center; height: auto; width: 100%; border: 0px none transparent;" width="260"></a>
+    </td>
+  </tr>
+  <tr>
+    <td style="font-family: 'Bembo MT Pro', Helvetica, serif; font-size: 18px; line-height: 24px; color: #000001; font-weight: 400; max-width: 260px;" align="center">
+      <p style="margin: 10px;">
+        <a  href="https://click.c.coach.com/?qs=12d6fd5142870f2b900dd5775338dcf73e955e41865e016bee8fd28d2e40ee8adac16f28aeb38b9a7771164f5d5fe3edc6a2755ee216089e20ea27b36b90ec2e" style="color:#000001; text-decoration: none;" target="_blank"><strong>Join our loyalty program</strong><br>for exclusive early<br>access, offers and more.</a>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td style="padding: 10px 0 30px; mso-padding-alt: 10px 0 40px;" align="center">
+      <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="cta-link" style="background-color: #ffffff; border-bottom: 1px solid #000001; font-family: 'Helvetica LT W05 Roman', Helvetica, sans-serif;" align="center">
+            <a  href="https://click.c.coach.com/?qs=12d6fd5142870f2b900dd5775338dcf73e955e41865e016bee8fd28d2e40ee8adac16f28aeb38b9a7771164f5d5fe3edc6a2755ee216089e20ea27b36b90ec2e" style="color: #000001; display: inline-block; font-size: 18px; font-weight: 400; line-height: 22px; mso-line-height-alt: 90%; text-decoration: none; text-transform: uppercase; padding-bottom: 2px;" target="_blank">BECOME AN INSIDER</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table></td></tr></table></td><td valign="top" class="responsive-td" style="width: 50%; padding-left: 0px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td style="border-left: 1px #000001 solid; padding: 20px 0px 0px;" align="center">
+      <a href="https://click.c.coach.com/?qs=12d6fd5142870f2b248bbbd039272d6f95c3e1bd2ce089ba0940428c4c4ce1812faac2c6062aaf39188c9918512a0b1ac0a372bd30f9d2eddc14d1abaf665c1e" title=""   data-linkto="https://"><img data-assetid="159941" src="https://image.c.coach.com/lib/fe32157075640775701276/m/8/ServiceBanner_02_SMS_DarkModeIcon.png" alt="" style="display: block; padding: 0px; text-align: center; height: 50px; width: 100%; border: 0px none transparent;" width="260"></a>
+    </td>
+  </tr>
+  <tr>
+    <td style="font-family: 'Bembo MT Pro', Helvetica, serif; font-size: 18px; line-height: 24px; color: #000001; font-weight: 400; max-width: 260px; border-left: 1px #000001 solid;" align="center">
+      <p style="margin: 10px;">
+        <a  href="https://click.c.coach.com/?qs=12d6fd5142870f2b248bbbd039272d6f95c3e1bd2ce089ba0940428c4c4ce1812faac2c6062aaf39188c9918512a0b1ac0a372bd30f9d2eddc14d1abaf665c1e" style="color:#000001; text-decoration: none;" target="_blank"><strong>Take $15 off $150</strong><br>when you sign up for<br>SMS updates.</a>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td style="border-left: 1px #000001 solid; padding: 10px 0 40px; mso-padding-alt: 10px 0 40px;" align="center">
+      <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="cta-link" style="background-color: #ffffff; border-bottom: 1px solid #000001; font-family: 'Helvetica LT W05 Roman', Helvetica, sans-serif;" align="center">
+            <a  href="https://click.c.coach.com/?qs=12d6fd5142870f2b248bbbd039272d6f95c3e1bd2ce089ba0940428c4c4ce1812faac2c6062aaf39188c9918512a0b1ac0a372bd30f9d2eddc14d1abaf665c1e" style="color: #000001; display: inline-block; font-size: 18px; font-weight: 400; line-height: 22px; mso-line-height-alt: 90%; text-decoration: none; text-transform: uppercase; padding-bottom: 2px;" target="_blank">SIGN UP FOR TEXTS</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+ <tr>
+    <td style="border-top: 1px #000001 solid; border-left: 1px #000001 solid; padding: 30px 0px 0px;" align="center">
+      <a href="https://click.c.coach.com/?qs=12d6fd5142870f2ba571bfee44ab6cbee234638ac765871d22a00e29c61fe2e74a95712d9d68bf1e5f39d667e4bcd9ad1ca7e6abbffef8dff7306d45fb517905" title=""   data-linkto="https://"><img data-assetid="159941" src="https://image.c.coach.com/lib/fe32157075640775701276/m/8/ServiceBanner_03_RAF_DarkModeIcon.png" alt="" style="display: block; padding: 0px; text-align: center; height: auto; width: 100%; border: 0px none transparent;" width="260"></a>
+    </td>
+  </tr>
+  <tr>
+    <td style="font-family: 'Bembo MT Pro', Helvetica, serif; font-size: 18px; line-height: 24px; color: #000001; font-weight: 400; max-width: 260px; border-left: 1px #000001 solid;" align="center">
+      <p style="margin: 10px;">
+        <a  href="https://click.c.coach.com/?qs=12d6fd5142870f2ba571bfee44ab6cbee234638ac765871d22a00e29c61fe2e74a95712d9d68bf1e5f39d667e4bcd9ad1ca7e6abbffef8dff7306d45fb517905" style="color:#000001; text-decoration: none;" target="_blank"><strong>Give $40, get $40</strong> for<br>yourself (or $50 if you sign<br>in or sign up as an Insider).</a>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td style="padding: 10px 0 30px; mso-padding-alt: 10px 0 40px; border-left: 1px #000001 solid;" align="center">
+      <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="cta-link" style="background-color: #ffffff; border-bottom: 1px solid #000001; font-family: 'Helvetica LT W05 Roman', Helvetica, sans-serif;" align="center">
+            <a  href="https://click.c.coach.com/?qs=12d6fd5142870f2ba571bfee44ab6cbee234638ac765871d22a00e29c61fe2e74a95712d9d68bf1e5f39d667e4bcd9ad1ca7e6abbffef8dff7306d45fb517905" style="color: #000001; display: inline-block; font-size: 18px; font-weight: 400; line-height: 22px; mso-line-height-alt: 90%; text-decoration: none; text-transform: uppercase; padding-bottom: 2px;" target="_blank">REFER A FRIEND</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table></td></tr></table></td></tr></table></td></tr></table></td></tr></table>
+
+</td></tr></table><!----><!----><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"></td></tr></table><!---->
+                
+                <!----><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 40px 0px 0px; " class="stylingblock-content-wrapper camarker-inner"><table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+	
+		<tr>
+			<td class="nav-content" style="font-family: sans-serif; font-size: 18px; text-transform: uppercase; text-align: center; border-top: 1px #000001 solid; padding: 20px 0; letter-spacing: 1px;">
+				<p style="margin: 0;">
+					<a  href="https://click.c.coach.com/?qs=1a8724e24e14b4c60f1d4b60be3f7b00391ea75084d50516d235322b4320159d9ca6475744f7bf04194c2caefe13922906916b2ef4a362c1d0f0dc640aefec73" style="color: #000001; text-decoration: none;" target="_blank">NEW ARRIVALS</a></p></td></tr><tr>
+			<td class="nav-content" style="font-family: sans-serif; font-size: 18px; text-transform: uppercase; text-align: center; border-top: 1px #000001 solid; padding: 20px 0; letter-spacing: 1px;">
+				<p style="margin: 0;">
+					<a  href="https://click.c.coach.com/?qs=1a8724e24e14b4c6a8bd3ff9db20102b8ac1a946341c7dc6b95fd41915b2c2d92f29017ebedcdd6b560df18878ac57f7fd1c864d1bc9cb144989217245b647b9" style="color: #000001; text-decoration: none;" target="_blank">BAGS</a></p></td></tr><tr>
+			<td class="nav-content" style="font-family: sans-serif; font-size: 18px; text-transform: uppercase; text-align: center; border-top: 1px #000001 solid; padding: 20px 0; letter-spacing: 1px;">
+				<p style="margin: 0;">
+					<a  href="https://click.c.coach.com/?qs=1a8724e24e14b4c6e646588deab27a2de82d95d7f863cbb709e016d4e7ce7d43a70ab479bc4ad48f521093e05d37ec9a19b837f4da9ee267e2437ed9a5305b05" style="color: #000001; text-decoration: none;" target="_blank">GIFTS</a></p></td></tr><tr>
+			<td class="nav-content" style="font-family: sans-serif; font-size: 18px; text-transform: uppercase; text-align: center; border-top: 1px #000001 solid; padding: 20px 0; letter-spacing: 1px;">
+				<p style="margin: 0;">
+					<a  href="https://click.c.coach.com/?qs=1a8724e24e14b4c60a6d06e97ffcdb2255c0a48f2ae0db88761d212f02800412a5565c65b34bbe6608bec27a0575cf2b36d1346a18d3b96a505c2a07658043e9" style="color: #000001; text-decoration: none;" target="_blank">SALE</a></p></td></tr></table></td></tr></table><!---->
+                
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+                  <tr>
+                    <td align="center" style="border-top: 1px #000001 solid; padding: 40px 0 30px;">
+                      <table border="0" cellpadding="0" cellspacing="0" role="presentation">
+                        <tr>
+                          <td align="center" colspan="5">
+                            <h1 style="color: #000001; font-family: 'Helvetica LT W05 Bold', Helvetica, serif; font-size: 21px; line-height: 28px; mso-line-height-alt: 100%; margin: 0px 0px 10px; font-weight: bold;">Don't miss a thing.
+                            </h1>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="center">
+                            <a href="https://click.c.coach.com/?qs=1a8724e24e14b4c64b37293631e9f0c9038ce354791c5c47462390a68901eda3f13d1baf7c88fc80e19c3e939303d91dd1f62382dbaa819c5012358cd01fa599"  target="_blank">
+                              <img src="https://image.c.coach.com/lib/fe32157075640775701276/m/7/a9dab6e2-69ca-4e74-966f-7ebf022434ea.png" alt="Facebook" width="35" style="border: 0; display: block; margin: 0; max-width: 35px; width: 100%;" />
+                            </a>
+                          </td>
+                          <td align="center">
+                            <a href="https://click.c.coach.com/?qs=1a8724e24e14b4c6b227013fab7f8dab1991e011831ac85f0bb1ad15dc34544994682323725b8eeeb36485bac0c3d9649b2611dccf61345434cbf7d307a2faff"  target="_blank">   <img src="https://image.c.coach.com/lib/fe32157075640775701276/m/7/c1a91968-0c4a-4d94-a47f-b7b5a1a9ec44.png" alt="Instagram" width="50" style="border: 0; display: block; margin: 0; max-width: 50px; width: 100%;" />
+                            </a>
+                          </td>
+                          <td align="center">
+                            <a href="https://click.c.coach.com/?qs=1a8724e24e14b4c619dfc9068d4f6ebdf6c3ca9072431dc289e118db79edd5e9c4ee9e10ae86b84a37853711f14df08fe1d69eb0fc7e78f7ab6739da39534fac"  target="_blank">
+                              <img src="https://image.c.coach.com/lib/fe32157075640775701276/m/7/c3e101af-01a0-4afd-affd-d3fa5d658d5f.png" alt="Twitter" width="53" style="border: 0; display: block; margin: 0; max-width: 53px; width: 100%;" />
+                            </a>
+                          </td>
+                          <td align="center">
+                            <a href="https://click.c.coach.com/?qs=1a8724e24e14b4c62e215a18f21defe70a3081ccb66fbc7f211af30194ba1f51e1855f116db5274d8b309f77763dbd7b534e91af18442245e6a93705ea4d8e94"  target="_blank">
+                              <img src="https://image.c.coach.com/lib/fe32157075640775701276/m/7/4ff5395e-639e-45a2-b319-5734c50362e6.png" alt="Youtube" width="59" style="border: 0; display: block; margin: 0; max-width: 59px; width: 100%;" />
+                            </a>
+                          </td>
+                          <td align="center">
+                            <a href="https://click.c.coach.com/?qs=1a8724e24e14b4c6c7262fb42a0ef8697f9e1884cb75c5a3b06687ec8d058d0b4cf8d049f19017248eb61dac550a81effb738f455f2e28a01f24b8561cf6ea25"  target="_blank">
+                              <img src="https://image.c.coach.com/lib/fe32157075640775701276/m/7/9be5535d-4743-483e-9fa5-28b4d440cb9c.png" alt="TikTok" width="45" style="border: 0; display: block; margin: 0; max-width: 45px; width: 100%;" />
+                            </a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <!----><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">
+<table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px; " class="stylingblock-content-wrapper camarker-inner"></td></tr></table>
+
+</td></tr></table><!----><!----><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+ 
+  <tr>
+   <td align="center" class="footer-content" style="padding: 0 35px 15px; color: #000001; font-family: sans-serif; font-size: 14px; line-height: 1.3;">
+    <p class="samsungfix" style="margin: 0 0 15px;">
+     Free standard shipping &amp; returns on all orders in Continental U.S, Hawaii, Alaska and Puerto Rico. Customized or monogrammed items cannot be returned or exchanged. Discounts or promotions are not eligible on Coachtopia products.</p><p class="samsungfix" style="margin: 0 0 15px;">
+     Please do not reply to this message. If you have any questions, please visit our <a href="https://click.c.coach.com/?qs=1a8724e24e14b4c6442ebb1a620eae22df2982943422bfabd7171d23ca4345d63ee7a556610a3a74cd4408d893443728b6977401de0fdd4bca757999e86be37d" style="color: #000001; text-decoration: underline;" target="_blank">FAQs</a>, or contact us <a href="https://click.c.coach.com/?qs=1a8724e24e14b4c6547e64e4cdd7fc2595fe08a3c7026eed03ea667a5f4624be655e6346e9df2381a0ed677dd36ab9f14d65add5ee456f36fa664e1bf1a32b6a" style="color: #000001; text-decoration: underline;" target="_blank">here</a>. Add <a href="mailto:Coach@em.coach.com" style="color: #000001; text-decoration: none;" target="_blank">Coach@em.coach.com</a> to your address book. Click 
+<a href="https://click.c.coach.com/?qs=1a8724e24e14b4c668d7db5e81d98cc96f11d06d7b76c06f2858b738e749769b81e6ccc89ff53908fbeb11f7f998c642fd0db9b26d8111155cdfca631676d719" style="color: #000001; text-decoration: underline;" target="_blank">here</a> to learn more about Coach's Privacy Policy.</p><p class="samsungfix" style="margin: 0 0 15px;">
+     Forward this email to a friend or <a  href="https://click.c.coach.com/?qs=1a8724e24e14b4c60c9f4927663431a06a12e29ad6f31e572d8e706c7bbfd28e6e98af1b198ad94aa610f23e65654bfde9f74390116abfe43546f0c147ccb1bf" style="color: #000001; text-decoration: underline;" target="_blank">click here</a> if you wish to subscribe to future Coach emails.</p><p style="margin: 0 0 15px;">
+     This message may constitute an advertisement or solicitation under federal law. If you wish to unsubscribe or change your email address, please <a  data-litmus-ignore="" href="https://click.c.coach.com/?qs=1a8724e24e14b4c618dac851e69d49a89c3c34eb53154ae72cef2101557f292acb99a26e84cb6b07ddd32f250bda529f9fd4163c9ebbcbc041f81a92179e05ee" style="color: #000001; text-decoration: underline;" target="_blank">click here</a>.</p><p class="samsungfix" style="margin: 0 0 15px;">
+     &copy; 2023 Tapestry, Inc. 10 Hudson Yards New York, NY 10001 US</p></td></tr></table></td></tr></table><!---->
+                
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
